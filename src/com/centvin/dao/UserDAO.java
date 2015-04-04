@@ -9,7 +9,7 @@ import java.util.List;
  * Interface DAO for User.
  */
 public interface UserDAO {
-    public boolean insert(User user);
+    public int insert(User user);
 
     public boolean deleteById(int id);
     public boolean deleteByEmail(String email);

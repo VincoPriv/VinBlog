@@ -16,7 +16,7 @@ public interface UserDAO {
 
     public boolean updatePassWord(int u_id, String password);
     public boolean updateUsername(int u_id, String username);
-    public boolean updateAvator(int u_id, String avator);
+    public boolean updateAvatar(int u_id, String avator);
 
     public User selectById(int id);
     public User selectByEmail(String email);

@@ -55,7 +55,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public boolean updateAvator(int u_id, String avatar) {
+    public boolean updateAvatar(int u_id, String avatar) {
         String sql = "Update user set avatar = ? where id= ?";
         return DBUtils.excuteUpdate(connection,sql,avatar,u_id);
     }

@@ -1,5 +1,7 @@
 package com.centvin.entity;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.List;
  * Created by vinco on 15-4-3.
  * Entity Post.
  */
-public class Post {
+public class Post extends Base {
     private int post_id;
 
     private String title;
@@ -73,5 +75,17 @@ public class Post {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    @Override
+    public void setData(ResultSet resultSet) {
+        try {
+            setPost_id(resultSet.getInt("id"));
+            setContent(resultSet.getString("content"));
+            setTitle(resultSet.getString("title"));
+            setCreated_at(resultSet.getDate("create_time"));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

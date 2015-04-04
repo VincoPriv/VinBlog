@@ -47,8 +47,8 @@ public class UserDAOProxy implements UserDAO, Closeable{
     }
 
     @Override
-    public boolean updateAvator(int u_id, String avator) {
-        return userDAO.updateAvator(u_id,avator);
+    public boolean updateAvatar(int u_id, String avator) {
+        return userDAO.updateAvatar(u_id, avator);
     }
 
     @Override
